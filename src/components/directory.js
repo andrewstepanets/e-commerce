@@ -40,9 +40,8 @@ export function Directory() {
     ]);
     return (
         <DirectoryMenu className="directory-menu">
-            {sections.map(({ title, imageUrl, size, id, lonkUrl }) => (
-
-                <MenuItem key={id} title={title} />
+            {sections.map(({ title, imageUrl, id, size }) => (
+                <MenuItem key={id} title={title} imageUrl={imageUrl} size={size} />
             )
             )}
         </DirectoryMenu>

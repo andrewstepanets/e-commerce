@@ -2,10 +2,10 @@
 import React from 'react';
 import { MenuItemBlock, ContentBlock } from 'styles/menu.styles';
 
-export function MenuItem({ title }) {
+export function MenuItem({ title, imageUrl, size }) {
     return (
 
-        <MenuItemBlock className="menu-item">
+        <MenuItemBlock className={`${size} menu-item`} background={imageUrl}>
             <ContentBlock className="content">
                 <h2 className="title">{title}</h2>
                 <span className="subtitle">Shop Now</span>

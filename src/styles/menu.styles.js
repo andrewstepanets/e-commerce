@@ -11,7 +11,11 @@ export const MenuItemBlock = styled.div`
   justify-content: center;
   border: 1px solid black;
   margin: 0 7.5px 15px;
+  background: no-repeat center/cover url(${props => props.background});
 
+  &.large {
+    height: 380px;
+  }
   &:first-child {
     margin-right: 7.5px;
   }
