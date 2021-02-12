@@ -1,6 +1,7 @@
 import React from 'react';
-import GlobalStyles from 'styles/GlobalStyles';
-import HomePage from 'components/HomePage';
+import GlobalStyles from 'styles/global.styles';
+import DirectoryStyles from 'styles/directory.styles';
+import HomePage from 'pages/home-page';
 
 function App() {
   return (

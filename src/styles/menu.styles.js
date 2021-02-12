@@ -1,26 +1,8 @@
-import { createGlobalStyle } from 'styled-components';
 
-const GlobalStyles = createGlobalStyle`
 
-body {
-    margin: 0;
-}
+import styled from 'styled-components';
 
-.homepage {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px 80px;
-}
-
-.directory-menu {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.menu-item {
+export const MenuItemBlock = styled.div`
   min-width: 30%;
   height: 240px;
   flex: 1 1 auto;
@@ -37,8 +19,9 @@ body {
   &:last-child {
     margin-left: 7.5px;
   }
+`;
 
-  .content {
+export const ContentBlock = styled.div`
     height: 90px;
     padding: 0 25px;
     display: flex;
@@ -58,9 +41,4 @@ body {
       font-weight: lighter;
       font-size: 16px;
     }
-  }
-}
 `;
-
-
-export default GlobalStyles;
