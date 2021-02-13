@@ -6,8 +6,11 @@ export function MenuItem({ title, imageUrl, size }) {
     return (
 
         <MenuItemBlock className={`${size} menu-item`} background={imageUrl}>
+            <div className="background-image">
+
+            </div>
             <ContentBlock className="content">
-                <h2 className="title">{title}</h2>
+                <h2 className="title">{title.toUpperCase()}</h2>
                 <span className="subtitle">Shop Now</span>
             </ContentBlock>
         </MenuItemBlock>
