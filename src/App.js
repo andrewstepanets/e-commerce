@@ -1,21 +1,15 @@
 import React from 'react';
 import { Route, Switch } from "react-router-dom";
 import HomePage from 'pages/home-page';
+import ShopPage from 'pages/shop-page';
 
-function HatsPage() {
-  return (
-    <div>
-      <h1>Hats</h1>
-    </div>
-  )
-}
 
 function App() {
   return (
     <div>
       <Switch>
         <Route exact path='/' component={HomePage} />
-        <Route path='shop/hats' component={HatsPage} />
+        <Route path='/shop' component={ShopPage} />
         {/* <Route render={() => <h1>Page Not Found</h1>} /> */}
       </Switch>
     </div>
