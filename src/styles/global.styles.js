@@ -8,6 +8,10 @@ body {
     padding: 20px 60px;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
 .homepage {
   display: flex;
   flex-direction: column;
