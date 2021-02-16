@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import FormInput from 'components/form-input';
+
+import SignInBlock from 'styles/sign-in-block.styles';
 
 
 
@@ -27,27 +30,27 @@ function SignIn() {
     }
 
     return (
-        <div className="sign-in">
+        <SignInBlock className="sign-in">
             <h2>I already have an account</h2>
             <span>Sign in with your email and password</span>
             <form onSubmit={handleSubmit}>
-                <input
+                <FormInput
                     type="email"
                     name="email"
                     value={data.email}
+                    label="email"
                     required
-                    onChange={handleChange} />
-                <label>Email</label>
-                <input
+                    handleChange={handleChange} />
+                <FormInput
                     type="password"
                     name="password"
                     value={data.password}
+                    label="password"
                     required
-                    onChange={handleChange} />
-                <label>Password</label>
+                    handleChange={handleChange} />
                 <input type="submit" value="Submit Form" />
             </form>
-        </div>
+        </SignInBlock>
     )
 }
 
