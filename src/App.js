@@ -6,20 +6,13 @@ import HomePage from 'pages/home-page';
 import ShopPage from 'pages/shop-page';
 import SignInAndSignUpPage from 'pages/sign-in-and-sign-up-page';
 
-import { auth } from 'firebase/firebase.utils';
+import { useGoogleUser } from 'firebase/hooks';
 
 function App() {
 
+  const currentUser = useGoogleUser();
 
-  const [user, setUser] = useState({
-    currentUser: null
-  })
-
-  useEffect(() => {
-    auth.onAuthStateChanged(user => {
-      setUser({ currentUser: user })
-    })
-  }, [])
+  console.log(currentUser);
 
   return (
     <div>
