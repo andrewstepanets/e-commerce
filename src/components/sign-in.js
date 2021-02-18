@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import FormInput from 'components/form-input';
+import CustomButton from 'components/custom-button';
 
 import SignInBlock from 'styles/sign-in-block.styles';
 
@@ -31,7 +32,7 @@ function SignIn() {
 
     return (
         <SignInBlock className="sign-in">
-            <h2>I already have an account</h2>
+            <h2 className="title">I already have an account</h2>
             <span>Sign in with your email and password</span>
             <form onSubmit={handleSubmit}>
                 <FormInput
@@ -48,7 +49,9 @@ function SignIn() {
                     label="password"
                     required
                     handleChange={handleChange} />
-                <input type="submit" value="Submit Form" />
+                <CustomButton type="submit">
+                    Sign In
+                </CustomButton>
             </form>
         </SignInBlock>
     )
