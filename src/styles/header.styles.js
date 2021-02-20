@@ -24,6 +24,7 @@ const HeaderBlock = styled.header`
 
         .option {
         padding: 10px 15px;
+        cursor: pointer;
         }
     }
 
