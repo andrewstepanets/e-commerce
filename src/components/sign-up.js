@@ -15,21 +15,39 @@ function SignUp() {
 
   function handleChange(e) {
 
-    const { value, name } = e.target;
+    const { name, value } = e.target;
     setData(prevState => ({
       ...prevState,
       [name]: value
     }))
   }
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
-    setData({
-      displayName: '',
-      email: '',
-      password: '',
-      confirmPassword: ''
-    })
+    const { displayName, email, password, confirmPassword } = data;
+    if (password !== confirmPassword) {
+      alert(`Password don't match`);
+      return;
+    }
+
+    try {
+
+      const { user } = await auth.createUserWithEmailAndPassword(email, password);
+
+      await createUserProfileDocument(user, { displayName });
+
+      setData({
+        displayName: '',
+        email: '',
+        password: '',
+        confirmPassword: ''
+      })
+
+    } catch (error) {
+
+      console.error(error);
+
+    }
   }
 
   return (
