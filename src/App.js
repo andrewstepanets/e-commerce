@@ -11,7 +11,6 @@ import { useGoogleUser } from 'firebase/hooks';
 function App() {
 
   const currentUser = useGoogleUser();
-  console.log(currentUser);
 
   return (
     <div>

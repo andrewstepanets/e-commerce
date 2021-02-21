@@ -9,6 +9,9 @@ const SignInBlock = styled.div`
     .title {
         margin: 10px  0;
     }
+    form {
+        flex: 1;
+    }
     .buttons {
         display: flex;
         justify-content: space-between;
