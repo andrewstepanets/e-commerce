@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import FormInput from 'components/form-input';
-import CustomButton from 'components/custom-button';
+import FormInput from '../components/form-input';
+import CustomButton from '../components/custom-button';
 
-import { auth, signInWithGoogle } from 'firebase/firebase.utils';
+import { auth, signInWithGoogle } from '../firebase/firebase.utils';
 
-import SignInBlock from 'styles/sign-in-block.styles';
+import SignInBlock from '../styles/sign-in-block.styles';
 
 
 

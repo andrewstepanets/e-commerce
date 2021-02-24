@@ -1,5 +1,5 @@
 import React from 'react';
-import CollectionItemBlock from 'styles/collection-item.styles';
+import CollectionItemBlock from '../styles/collection-item.styles';
 
 function CollectionItem({ id, name, price, imageUrl }) {
     return (

@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import FormInput from 'components/form-input';
-import CustomButton from 'components/custom-button';
-import { auth, createUserProfileDocument } from 'firebase/firebase.utils';
+import FormInput from '../components/form-input';
+import CustomButton from '../components/custom-button';
+import { auth, createUserProfileDocument } from '../firebase/firebase.utils';
 
-import SignUpBlock from 'styles/sign-up-block.styles';
+import SignUpBlock from '../styles/sign-up-block.styles';
 
 function SignUp() {
   const [data, setData] = useState({

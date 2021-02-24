@@ -1,6 +1,6 @@
 import React from 'react';
-import CollectionPreviewBlock from 'styles/collection-preview.styles';
-import CollectionItem from 'components/collection-item';
+import CollectionPreviewBlock from '../styles/collection-preview.styles';
+import CollectionItem from '../components/collection-item';
 
 function CollectionPreview({ title, items }) {
     return (

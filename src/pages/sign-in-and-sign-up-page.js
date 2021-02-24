@@ -1,9 +1,9 @@
 import React from 'react';
 
-import SignIn from 'components/sign-in';
-import SignUp from 'components/sign-up';
+import SignIn from '../components/sign-in';
+import SignUp from '../components/sign-up';
 
-import SignInAndSignUpBlock from 'styles/sign-in-and-sign-up-block'
+import SignInAndSignUpBlock from '../styles/sign-in-and-sign-up-block'
 
 function SignInAndSignUpPage() {
     return (

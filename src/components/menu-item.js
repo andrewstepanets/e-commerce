@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import { MenuItemBlock, ContentBlock } from 'styles/menu.styles';
+import { MenuItemBlock, ContentBlock } from '../styles/menu.styles';
 
 export function MenuItem({ title, imageUrl, size, linkUrl, history, match }) {
     return (

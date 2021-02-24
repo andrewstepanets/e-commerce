@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from 'styles/custom-button.styles';
+import Button from '../styles/custom-button.styles';
 
 function CustomButton({ children, isGoogleSignIn, ...otherProps }) {
   return (

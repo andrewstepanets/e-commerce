@@ -1,5 +1,5 @@
 import React from 'react';
-import FormGroup from 'styles/form-group.styles';
+import FormGroup from '../styles/form-group.styles';
 
 function FormInput({ handleChange, label, ...otherProps }) {
     return (
