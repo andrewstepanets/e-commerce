@@ -12,7 +12,8 @@ function CartIcon({ toggleCartHidden }) {
   return (
     <CartIconBlock
       className="cart-icon"
-      onClick={toggleCartHidden}>
+      onClick={toggleCartHidden}
+    >
       <ShoppingIcon className="shopping-icon" />
       <span className="item-count">0</span>
     </CartIconBlock>

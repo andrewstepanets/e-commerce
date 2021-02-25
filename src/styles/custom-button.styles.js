@@ -16,6 +16,8 @@ min-width: 165px;
   font-weight: bolder;
   border: none;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
 
   &:hover {
     background-color: white;
@@ -30,7 +32,17 @@ min-width: 165px;
       border: none;
     }
   }
-
+  &.inverted {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    
+    &:hover {
+      background-color: black;
+      color: white;
+      border: none;
+    }
+  }
 `;
 
 export default Button;
