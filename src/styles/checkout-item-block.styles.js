@@ -26,8 +26,17 @@ const CheckoutItemBlock = styled.div`
       }
 
       .quantity {
-        padding-left: 20px;
+        display: flex;
+        align-items: center;
+        
+        .arrow {
+          cursor: pointer;
+        }
+        .value {
+          margin: 0 10px;
+        }
       }
+      
 
       .remove-button {
         padding-left: 12px;
