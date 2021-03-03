@@ -33,6 +33,18 @@ const CheckoutPageBlock = styled.div`
     font-size: 36px;
   }
 
+  button {
+    margin-left: auto;
+    margin-top: 50px;
+  }
+
+  .test-warning {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 14px;
+    color: red;
+  }
+
 `;
 
 export default CheckoutPageBlock;
