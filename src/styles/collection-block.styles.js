@@ -12,7 +12,7 @@ const CollectionBlock = styled.div`
 
   .items {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px;
 
     & .collection-item {

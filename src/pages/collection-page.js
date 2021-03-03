@@ -2,16 +2,22 @@ import React from 'react';
 import CollectionItem from '../components/collection-item';
 
 import { connect } from 'react-redux';
-import { createStructuredSelector } from 'reselect';
 import { selectCollection } from '../redux/shop/shop.selectors';
 
 import CollectionBlock from '../styles/collection-block.styles';
 
 function CollectionPage({ collection }) {
-  console.log(collection);
+  const { title, items } = collection;
   return (
     <CollectionBlock className="collection-page">
-      <h2 className="title">Collection Page</h2>
+      <h2 className="title">{title}</h2>
+      <div className="items">
+        {
+          items.map(item => (
+            <CollectionItem key={item.id} className="collection-item" item={item} />
+          ))
+        }
+      </div>
 
     </CollectionBlock>
   )
