@@ -13,6 +13,8 @@ import ShopPage from './pages/shop-page';
 import SignInAndSignUpPage from './pages/sign-in-and-sign-up-page';
 import CheckoutPage from './pages/checkout/checkout.component';
 
+import { selectCollectionsForPreview } from './redux/shop/shop.selectors';
+
 // import { useGoogleUser } from './firebase/hooks';
 
 import { setCurrentUser } from './redux/user/user.actions';
@@ -66,7 +68,8 @@ class App extends React.Component {
 }
 
 const mapStateToProps = createStructuredSelector({
-  currentUser: selectCurrentUser
+  currentUser: selectCurrentUser,
+  collectionsArray: selectCollectionsForPreview
 })
 
 const mapDispatchToProps = dispatch => ({
