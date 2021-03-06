@@ -9,11 +9,10 @@ import { selectCurrentUser } from './redux/user/user.selectors'
 import Header from './components/header/header.component';
 
 import HomePage from './pages/homepage/homepage.component';
-import ShopPage from './pages/shop-page';
-import SignInAndSignUpPage from './pages/sign-in-and-sign-up-page';
+import ShopPage from './pages/shop/shop-page';
+import SignInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up-page';
 import CheckoutPage from './pages/checkout/checkout.component';
 
-import { selectCollectionsForPreview } from './redux/shop/shop.selectors';
 
 // import { useGoogleUser } from './firebase/hooks';
 
@@ -69,7 +68,6 @@ class App extends React.Component {
 
 const mapStateToProps = createStructuredSelector({
   currentUser: selectCurrentUser,
-  collectionsArray: selectCollectionsForPreview
 })
 
 const mapDispatchToProps = dispatch => ({

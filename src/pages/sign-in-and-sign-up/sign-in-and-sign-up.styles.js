@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 
-const SignInAndSignUpBlock = styled.div`
+export const SignInAndSignUpContainer = styled.div`
 
   width: 850px;
   display: flex;
@@ -9,5 +9,3 @@ const SignInAndSignUpBlock = styled.div`
   margin: 30px auto;
 
 `;
-
-export default SignInAndSignUpBlock;
