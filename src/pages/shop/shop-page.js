@@ -16,7 +16,6 @@ const CollectionsPageWithSpinner = WithSpinner(CollectionPage);
 
 function ShopPage({ updateCollections, match }) {
 
-    let unsubscribeFromSnapshot = null;
 
     const [isLoading, setIsLoading] = useState(true);
 
@@ -24,7 +23,11 @@ function ShopPage({ updateCollections, match }) {
 
         const collectionRef = firestore.collection('collections')
 
-        unsubscribeFromSnapshot = collectionRef.onSnapshot(async snapshot => {
+        // fetch(`https://firestore.googleapis.com/v1/projects/${process.env.REACT_APP_FIREBASE_PROJECT_ID}/databases/(default)/documents/collections`)
+        //     .then(response => response.json())
+        //     .then(collections => console.log(collections))
+
+        collectionRef.get().then(snapshot => {
             const collectionsMap = convertCollectionsSnapshotToMap(snapshot)
             updateCollections(collectionsMap);
             setIsLoading(false);
