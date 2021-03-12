@@ -3,7 +3,9 @@ import { Route, Switch, Redirect } from "react-router-dom";
 
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
+
 import { selectCurrentUser } from './redux/user/user.selectors'
+import { checkUserSession } from './redux/user/user.actions'
 
 import Header from './components/header/header.component';
 
@@ -20,7 +22,8 @@ class App extends React.Component {
 
   unsubscribeFromAuth = null;
   componentDidMount() {
-
+    const { checkUserSession } = this.props;
+    checkUserSession();
   }
 
   componentWillUnmount() {
@@ -52,4 +55,9 @@ const mapStateToProps = createStructuredSelector({
 })
 
 
-export default connect(mapStateToProps)(App);
+const mapDispatchToProps = dispatch => ({
+  checkUserSession: () => dispatch(checkUserSession())
+})
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
