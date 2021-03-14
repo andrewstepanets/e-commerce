@@ -4,6 +4,7 @@ import CollectionItem from '../../components/collection-item/collection-item.com
 import { connect } from 'react-redux';
 import { selectCollection } from '../../redux/shop/shop.selectors';
 
+
 import {
   CollectionPageContainer,
   CollectionTitle,
@@ -11,6 +12,20 @@ import {
 } from './collection.styles';
 
 function CollectionPage({ collection }) {
+
+  // This is an example of using useEffect instead ComponentWillUnmount()
+  // useEffect(() => {
+
+  //   console.log(`I'm subscribing`);
+
+  //   const unsubscribeFromCollections = firestore.collection('collections').onSnapshot(snapshot => console.log(snapshot))
+
+  //   return () => {
+  //     console.log(`I'm unsubscribing`);
+  //     unsubscribeFromCollections()
+  //   }
+  // }, [])
+
   const { title, items } = collection;
   return (
     <CollectionPageContainer>

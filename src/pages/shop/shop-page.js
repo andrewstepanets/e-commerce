@@ -8,36 +8,11 @@ import CollectionsOverviewContainer from '../../components/collection-overview/c
 import CollectionPageContainer from '../collection/collection.container';
 
 
-// class ShopPage extends React.Component {
-
-//     componentDidMount() {
-//         const { fetchCollectionsStartAsync } = this.props;
-
-//         fetchCollectionsStartAsync();
-//     }
-
-//     render() {
-//         const { match, isCollectionFetching, isCollectionLoaded } = this.props
-//         return (
-//             <div className="shop-page">
-//                 <Route
-//                     exact path={`${match.path}`}
-//                     render={(props) => <CollectionsOverviewWithSpinner isLoading={isCollectionFetching} {...props} />}
-//                 />
-//                 <Route
-//                     path={`${match.path}/:collectionId`}
-//                     render={(props) => <CollectionsPageWithSpinner isLoading={!isCollectionLoaded} {...props} />}
-//                 />
-//             </div>
-//         )
-//     }
-
-// }
 function ShopPage({ fetchCollectionsStart, match }) {
 
-    useEffect(() =>
-        fetchCollectionsStart(), []
-    )
+    useEffect(() => {
+        fetchCollectionsStart()
+    }, [fetchCollectionsStart])
 
     return (
         <div className="shop-page">
