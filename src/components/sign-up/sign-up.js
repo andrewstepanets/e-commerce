@@ -1,33 +1,25 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 
-import FormInput from '../components/form-input';
-import CustomButton from './custom-button/custom-button.component';
+import FormInput from '../form-input';
+import CustomButton from '../custom-button/custom-button.component';
 
-import { signUpStart } from '../redux/user/user.actions';
+import { signUpStart } from '../../redux/user/user.actions';
 
-import SignUpBlock from '../styles/sign-up-block.styles';
+import { SignUpContainer, SignUpTitle } from './sign-up.styles';
 
 function SignUp({ signUpStart }) {
-  const [data, setData] = useState({
+  const [userCredentials, setUserCredentials] = useState({
     displayName: '',
     email: '',
     password: '',
     confirmPassword: ''
   })
 
-  function handleChange(e) {
-
-    const { name, value } = e.target;
-    setData(prevState => ({
-      ...prevState,
-      [name]: value
-    }))
-  }
+  const { displayName, email, password, confirmPassword } = userCredentials;
 
   async function handleSubmit(e) {
     e.preventDefault();
-    const { displayName, email, password, confirmPassword } = data;
     if (password !== confirmPassword) {
       alert(`Password don't match`);
       return;
@@ -37,11 +29,19 @@ function SignUp({ signUpStart }) {
 
   }
 
+  function handleChange(e) {
+
+    const { name, value } = e.target;
+    setUserCredentials({ ...userCredentials, [name]: value })
+  }
+
+
+
   return (
-    <SignUpBlock className="sign-up">
-      <h2 className="title">
+    <SignUpContainer>
+      <SignUpTitle>
         I don't have an account
-        </h2>
+        </SignUpTitle>
       <span>
         Sign up with your email and password
         </span>
@@ -49,34 +49,34 @@ function SignUp({ signUpStart }) {
         <FormInput
           type="text"
           name="displayName"
-          value={data.displayName}
+          value={displayName}
           onChange={handleChange}
           label="Display Name"
           required />
         <FormInput
           type="email"
           name="email"
-          value={data.email}
+          value={email}
           onChange={handleChange}
           label="Email"
           required />
         <FormInput
           type="password"
           name="password"
-          value={data.password}
+          value={password}
           onChange={handleChange}
           label="Password"
           required />
         <FormInput
           type="password"
           name="confirmPassword"
-          value={data.confirmPassword}
+          value={confirmPassword}
           onChange={handleChange}
           label="Confirm Password"
           required />
         <CustomButton type="submit">Sign Up</CustomButton>
       </form>
-    </SignUpBlock>
+    </SignUpContainer>
   )
 }
 
