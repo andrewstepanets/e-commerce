@@ -9,7 +9,7 @@ import { selectCurrentUser } from '../../redux/user/user.selectors'
 import { signOutStart } from '../../redux/user/user.actions'
 
 import CartIcon from '../cart-icon';
-import CartDropdown from '../cart-dropdown';
+import CartDropdown from '../cart-dropdown/cart-dropdown';
 
 import { ReactComponent as Logo } from '../../assets/crown.svg';
 
