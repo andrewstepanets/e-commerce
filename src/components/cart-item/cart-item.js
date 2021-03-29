@@ -10,10 +10,12 @@ import {
 function CartItem({ item: { imageUrl, price, name, quantity } }) {
   return (
     <CartItemContainer>
-      <CartItemImage src={imageUrl} alt={name} />
+      <CartItemImage src={imageUrl} alt='item' />
       <ItemDetailsContainer>
-        <span className="name">{name}</span>
-        <span className="price">{quantity} x ${price}</span>
+        <span>{name}</span>
+        <span>
+          {quantity} x ${price}
+        </span>
       </ItemDetailsContainer>
     </CartItemContainer>
   )
