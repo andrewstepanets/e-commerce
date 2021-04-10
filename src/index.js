@@ -5,7 +5,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 
-import GlobalStyles from './styles/global.styles';
+
 import App from './App';
 
 import { store, persistor } from './redux/store';
@@ -17,7 +17,6 @@ ReactDOM.render(
     <BrowserRouter>
       <React.StrictMode>
         <PersistGate persistor={persistor}>
-          <GlobalStyles />
           <App />
         </PersistGate>
       </React.StrictMode>

@@ -14,6 +14,8 @@ import ShopPage from './pages/shop/shop-page';
 import SignInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up-page';
 import CheckoutPage from './pages/checkout/checkout.component';
 
+import GlobalStyles from './styles/global.styles';
+
 
 
 
@@ -27,6 +29,7 @@ function App({ checkUserSession, currentUser }) {
 
   return (
     <div>
+      <GlobalStyles />
       <Header />
       <Switch>
         <Route exact path='/' component={HomePage} />
